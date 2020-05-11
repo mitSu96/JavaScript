@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Print your name 5 times using h1 to h5 tag dynamically at run time</title>
+    
+</head>
+<body>
+    <div>
+        <label>Enter The Name To Be Printed-</label>
+        <input type="text" id="myname" ></input></br>
+        <button type="submit" onclick=" disp()">Submit</button>
+    </div>
+
+    <script>
+        function disp()
+        {
+            var name = document.getElementById("myname").value;
+            document.getElementById("h5").innerHTML=name;
+            document.getElementById("h4").innerHTML=name;
+            document.getElementById("h3").innerHTML=name;
+            document.getElementById("h2").innerHTML=name;
+            document.getElementById("h1").innerHTML=name;
+        }
+    </script>
+
+    <h5 id="h5"></h5>
+    <h4 id="h4"></h4>
+    <h3 id="h3"></h3>
+    <h2 id="h2"></h2>
+    <h1 id="h1"></h1>
+   
+    
+    
+    
+</body>
+</html>
