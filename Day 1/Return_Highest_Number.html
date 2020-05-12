@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		Write a function whose job is to take 3 parameters and return the highest number.</title> 
+</head> 
+
+<body style="text-align:center;"> 
+
+
+	<p>Finding the largest number from Three Values(Hardcoded Values) : (69, 26, 60496)</p> 
+
+	<p id="vita-demo"></p> 											<!--paragrah ID=vita-demo-->
+
+	<script> 
+		function HighestNumber( var1, var2, var3 ) 					//function name(parametr1,parameter2.....)
+		{ 
+			if( var1 > var2 ) 										//if statement to compare the parameter/variables
+			{ 
+				if( var1 > var3 ) 
+				{ 
+					return var1; 
+				} 
+				else 
+				{ 
+					return var3; 
+				} 
+			} 
+			else 
+			{ 
+				if( var2 > var3 )
+				{ 
+					return var2; 
+				} 
+				else
+				 { 
+					return var3; 
+				 } 
+			} 
+		} 
+		document.getElementById("vita-demo").innerHTML 			//HTML output using document.write().
+				= HighestNumber(69, 26, 60496); 
+	</script> 
+</body> 
+
+</html>					 
