@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1• Create an array having 10 numbers , write a function whose  job is to return max number from the array</title>
+</head>
+<body>
+    
+        <div class="containt">
+
+            <div class="section section1">                                                                          <!--Div Class For Button Creation For Inputting The Numbers-->
+                <h3>Create an array having 10 numbers , 
+                    write a function whose  job is to return max number from the array
+                </h3>
+                <label for="">Enter The Numbers To Be Stored In Array & Press The Next Number Button: </label><input type="number" name="" id="array1">
+                <button id="btn1" onclick="arrayFill()">Input Next Number</button>
+                <button id="btn2" onclick="maxNumber()" style="display: none;">Find The Greatest Number From Array</button>
+                <span id="rem"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        /*-----------------------------Task1-------------------------------------------------*/
+        
+        function arrayFill(){                                                                                       //arrayfill
+            if(arr1.length<=10){
+                arr1[i] = document.getElementById("array1").value;
+                document.getElementById("rem").innerHTML = ("Element: " + arr1[i] + " Added at index " + i);
+                i++;
+                document.getElementById("array1").value = "";
+                if(i==10){
+                document.getElementById("rem").innerHTML = "ARRAY IS FULL";
+                document.getElementById("btn2").style.display = "block";
+                document.getElementById("btn1").style.display = "none";
+                }
+            }
+            else {
+                
+            }
+        }
+
+        function maxNumber(){
+            size = arr1.length;
+            //alert ( size );
+            arr1.sort(function(a,b){return a-b});
+           // alert(arr1[size-1]);
+            document.getElementById("rem").innerHTML = 
+            "<h4>THE GREAEST NUMBER IS : "+ arr1[size-1]+"</h4>";
+        }
+
+    </script>
+</body>
+</html>
