@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-7• Create an array having 10 numbers and display it in ascending order.</title>
+    </head>
+<h4> Sorting Array In Ascending order</h4>
+
+<p>Click the button to sort in ascending order.</p>
+
+<button onclick="myFunction()">Ascending Sort</button>
+
+<p id="ascsort"></p>
+
+<script>
+var arr= [12, 06, 69, , 26, 08, 36, 02, 108, 101];
+document.getElementById("ascsort").innerHTML = arr;  
+
+function myFunction() 
+{
+  arr.sort(function(a, b){return a - b});
+  document.getElementById("ascsort").innerHTML = arr;
+}
+</script>
+
+</body>
+</html>
