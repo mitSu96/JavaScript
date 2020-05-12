@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <title>Task-1•Create an array having 10 numbers , write a function whose  job is to return max number from the array</title>
+    <h3>The Hard coded var num are [12, 06, 69, 21, 26, 08, 36, 02, 108, 101]</h3>
+    <h2>The HIghest Number Among The Above Is:</h2>
+    <p id="High"></p>
+<script>
+var num = [12, 06, 69, 21, 26, 08, 36, 02, 108, 101];
+document.getElementById("High").innerHTML = myArrayMax(num);
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+</script>
+
+</body>
+</html>
