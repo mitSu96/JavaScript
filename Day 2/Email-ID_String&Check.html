@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-9• Declare a string having an email Id and check if @ is there in the string</title>
+    </head>
+
+<p>Declare a string having an email Id and check if @ is there in the string</p></br>
+<p>If It Shows Value False Then @ is not present & If it Shows True means @ is present</p>
+
+<p id="mail"></p>
+<p id = "check"></p>
+<p id ="mail2"></p>
+<p id ="chk"></p>
+<button onclick="check()">Check Mail 1</button>
+<button onclick="chk()">Check Mail 2</button>
+
+
+<script>
+var str = "Mail 1 mitsu.contact@vita.edu";
+var str1 ="Mail 2 mitsuedu.com";
+document.getElementById("mail").innerHTML = str;
+document.getElementById("mail2").innerHTML = str1;
+
+function check()
+{
+   if(str.search("@")!=-1)
+   {
+    document.getElementById("check").innerHTML = "True";
+   } 
+   else
+   {
+    document.getElementById("check").innerHTML = "False";
+   }
+}
+function chk()
+{
+   if(str1.search("@")!=-1)
+   {
+    document.getElementById("check").innerHTML = "True";
+   } 
+   else
+   {
+    document.getElementById("check").innerHTML = "False";
+   }
+}
+
+</script>
+
+</body>
+</html>
