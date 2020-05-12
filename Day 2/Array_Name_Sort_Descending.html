@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-8• Create an array having 5 names and display it in descending order</title>
+    </head>
+
+<p>Array Sort In Descending Order</p>
+
+<button onclick="myFunction()">Sort Names In Descending Order</button>
+
+<p id="descsort"></p>
+
+<script>
+var names= ["Jerin", "Shubham", "Vishal", "mitSu","Pratik"];
+document.getElementById("descsort").innerHTML = names;
+
+function myFunction() {
+  names.sort();
+  names.reverse();
+  document.getElementById("descsort").innerHTML = names;
+}
+</script>
+
+</body>
+</html>
