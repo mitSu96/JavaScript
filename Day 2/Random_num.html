@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-11• Write a function whose  job is to return a random number.</title>
+    </head>
+
+    <h1>Write a function whose  job is to return a random number</h1>
+
+    <p id="random"></p>
+    <button onclick="returnnum()">Press To Return Random Number</button>
+
+    <script>
+        function returnnum()
+{
+    var no = Math.floor(Math.random() * 15)+10;
+    document.getElementById("random").innerHTML = no;
+}
+
+    </script>
+    
