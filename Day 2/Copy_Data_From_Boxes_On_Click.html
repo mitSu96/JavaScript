@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-6 • Create two text boxes and a button , on button click it should copy data from one text box to another.</title>
+    </head>
+
+    <h1>Create two text boxes and a button , on button click it should copy data from one text box to another.</h1>
+
+    <p id="DataCopy"></p>
+    <form>
+        <input id="tbox1" placeholder="Enter Data To Copied" type="text"><br><br><br>
+        <button onclick="copydata()">Copy Data To TextBox2</button><br><br><br>
+        <input id="tbox2" type="text">
+        
+
+    </form>
+
+    <script>
+            function copydata()
+                {
+                    document.getElementById("tbox2").value = document.getElementById("tbox1").value;
+    
+                }
+
+    </script>
