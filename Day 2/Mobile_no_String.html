@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <title>Task-10• Declare a string having a 10 digit mobile number. Wwrite a function whose  job is to check if it has 10 digits or not</title>
+    </head>
+
+<p>Declare a string having a 10 digit mobile number. Wwrite a function whose  job is to check if it has 10 digits or not</p></br>
+<h4>If It Shows Value False Then The Number Is Not 10 Digit & If it Shows True means It Is A 10 Digit Number</h4>
+
+<p id="mob"></p>
+<p id = "check"></p>
+<p id ="num"></p>
+<p id ="chk"></p>
+<button onclick="check()">Check Number 1</button>
+<button onclick="chk()">Check Number 2</button>
+
+<script>
+    var mob =8288926654;
+    var mstr = mob.toString();
+
+    document.getElementById("mob").innerHTML = mob;
+
+function check()
+{
+   if(mstr.length==10)
+   {
+    document.getElementById("mob").innerHTML = "Valid Number";
+   }
+   else
+   {
+    document.getElementById("mob").innerHTML = "Invalid Number";
+   }
+}
+
+var num =828892654;
+    var str = num.toString();
+
+    document.getElementById("num").innerHTML = num;
+
+function chk()
+{
+   if(str.length==10)
+   {
+    document.getElementById("num").innerHTML = "Valid Number";
+   }
+   else
+   {
+    document.getElementById("num").innerHTML = "Invalid Number";
+   }
+}
+
+</script>
