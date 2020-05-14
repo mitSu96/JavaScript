@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Day3-4 Assignments
+    </title>
+<body>
+
+<h2>Task 1-Using arrow function, print factorial of a number(6)</h2>
+
+    <p>To View Ouput of 12! In Console Log Press F12 To Open Dev Tools. </p><br>
+
+
+
+<script>
+const factorial = (no) => 
+{
+if ((no === 0) || (no === 1)) 
+    {
+        return 1;
+    }
+else
+    {
+        return (no * factorial(no - 1));
+    }
+};
+
+document.write(factorial(6));
+console.log(factorial(12));
+
+</script>
+
+</body>
+</html>
