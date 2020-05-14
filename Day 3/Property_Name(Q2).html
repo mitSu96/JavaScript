@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h3>Create class Account having property name, balance. Write method deposit whose job is to increase balance with the amount deposited by user.</h3>
+    <h3>Create two object sand call deposit method. Write method display which will display name and balance</h3>
+<script>
+
+          class Account
+          {
+              constructor(a,b)
+              {
+                  this.name = a;
+                  this.balance = b;
+              }
+
+            
+              deposit(amount)
+              {
+                  this.balance+=amount;
+              }
+          
+              display()
+              {
+                  var obj= "User Name :-"+this.name+"<br/>User Balance :-"+this.balance+"<br/><br/>";
+                  document.write(obj);  
+              }
+          }
+
+    
+          p1 = new Account("mitSu",360000);
+          p2 = new Account("Jerin",120000);
+          p1.deposit(55000);
+          p2.deposit(69000);
+          p1.display();
+          p2.display();
+
+        </script>
+  </head>
+  </html>
