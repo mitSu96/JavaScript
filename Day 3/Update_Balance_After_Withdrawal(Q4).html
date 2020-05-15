@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head><h3>Create class Account having instance member name , balance . It has method deposit whose job is to increase balance. Create a child class current account inheriting from Account class.</h3>
+    <h3>It has method withdraw whose job is to  reduce the balance. Create two objects of current account and call deposit and withdraw method.</h3>
+     <h3>Child class has show method whose job is to display name and new balance.
+</h3>
+</head>
+   
+
+  <body>
+    <p id="holder1"></p>
+    <p id="holder2"></p>
+    <script>
+    
+      class Account                           //Class Account To Hold User Credentials
+      {
+        constructor(username,depositamount)         //constructor class to invoke account having a name & predeposited balance
+        {
+          this.name=username;                 //name of acc holder
+          this.deposit= depositamount;       //Current Balance of acc holder
+          this.balance = 0;                   //Initiliaze Balance Zero
+        }
+
+        depositbal()                               //Method Deposit To Increase The Old Balance With New Added Amount
+        {
+          this.balance += this.deposit;   //New Balance calc after deposition of money
+        }
+
+
+        dispname(obj)                            //Method To Display Name of Acc Holder
+        {
+          return this.name;
+        }
+      }
+
+      class currentAccount extends Account        //Sub/Child Class To Hold Withdrawal Transactions & Update The Primary Class
+      {
+        constructor(username,depositamount,withdrawalAmount)               //constructor having acc holder name,old/deposited/current balance & Withdrawal amount as parameters
+        {
+          super(username,depositamount);                                  //invocation from main class param
+          this.withdrawal = withdrawalAmount;                             // withdrawal amount this function    
+        }
+
+        withdraw()                                            //Method TO Calaculate Withdrawal Amount & Update THe Balaance Of Account
+        {
+          this.balance -= this.withdrawal;                    //withdraw & Update
+        }
+
+        current(obj)                                         //Method To Get Current Balance After Withdrawal
+        {
+          document.getElementById(obj).innerHTML = "Acc Holder Name = "+this.dispname(obj)+"<br> Old Balance =₹"+this.deposit+" <br> Withdrawal Amount =₹"+this.withdrawal+" <br> Avaialable Balance After Withdrawal  = ₹"+this.balance+"<br/><br/>";
+        }
+      }
+      var user1 = new currentAccount("mitSu",360000,69000);
+      user1.depositbal();
+      user1.withdraw();
+      user1.current("holder1");
+
+      var user2 = new currentAccount("Jerin",120000,4800);
+      user2.depositbal()
+      user2.withdraw();
+      user2.current("holder2");
+    </script>
+  </body>
+</html>
