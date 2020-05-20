@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+    </head>
+    <body> 
+		<fieldset align=left>
+        <h1 style=text-align:center> REGISTRATION FORM </h1>		 
+        <form name="Register" action="" onsubmit="message()" method="post"> 
+        
+        <p>  User_ID: <input type="text" size=120 name="UID" id="UID" required onkeyup="fun_id()"><span id="1"></span> </p><br>	 
+        <p> Password: <input type="password" size=120 name="Password" id="pass" required onkeyup="fun_pass()"><span id="2"></span></p><br>
+        <p>Mobile_No: <input type="number"  name="Mob" id="num" required onkeyup="fun_mob()"><span id="3"></span> </p><br>
+        <p>  Address: <textarea cols="180" rows="5" name="Address" id="add" required onkeyup="fun_add()"></textarea><span id="4"></span> </p><br> 
+        <p>      Age: <input type="number"  name="Age" id="age" required onkeyup="fun_age()"><span id="5"></span> </p><br>
+          
+            <input type="submit" value="Submit" name="Submit">
+            <input type="reset" value="Reset" name="Reset"> 
+        		 
+        </form> 
+    </body>
+
+<script> 
+	let a=document.getElementById("1");			 
+	let b=document.getElementById("2");
+	let c=document.getElementById("3");
+	let d=document.getElementById("4");
+	let e=document.getElementById("5");
+
+			var uid = false;
+            var pass =false;
+            var mob = false;
+            var add = false;
+            var age_1 = false;
+            
+
+function fun_id()
+	{
+		let id=document.forms["Register"]["UID"].value;
+		if (id.value !="" || id.value!=NULL)								 
+		{  
+	
+			if(id.length > 2 && id.length < 16)
+				{
+                    a.innerHTML = "Accepted!";
+					a.style.color = "green";
+					uid = true;
+                }
+				else
+				{
+                    a.innerHTML = "User Id shoud be 3 to 15 characters long!";
+					a.style.color = "red";
+					uid = false;
+                }
+		} 
+	}
+	
+	function fun_pass()
+		{
+			let password = document.forms["Register"]["Password"].value; 
+			if(password.value != "" || password.value!= NULL)
+			{
+				if( password.length < 8)
+				{
+                    b.innerHTML = "Password should be 8 characters long";
+					b.style.color = "red";
+					pass=false;
+                }else{
+                    b.innerHTML = "Accepted!";
+					b.style.color = "green";
+					pass=true;
+                }
+            }
+
+		}
+	
+	
+function fun_mob()
+	{
+		let number = document.forms["Register"]["Mob"].value; 
+		if(number.value != "" || number.value!= NULL)
+			{
+				if(isNaN(number))
+				{
+                    y.innerHTML = "Please enter numbers only!";
+					y.style.color = "red";
+					mob=false;
+                }
+				if(number.length != 10)
+				{
+                    c.innerHTML = "Please enter 10 digit mobile number!"
+					c.style.color = "red";
+					mob=false;
+				}else
+				{
+                    c.innerHTML = "Accepted!";
+					c.style.color = "green";
+					mob=true;
+                }
+            }
+	}		
+                
+function fun_age()
+	{
+		let age=parseInt(document.forms["Register"]["age"].value);
+		let e=document.getElementById("5");
+
+		if( age!= "" || age!= NULL )
+			{
+				if(isNaN(age))
+				{
+                    e.innerHTML = "Please enter proper age in numeric value!";
+					e.style.color = "red";
+					age_1=false;
+                }
+				if(age >= 18 && age <= 100)
+				{
+                    e.innerHTML = "Approved!";
+					e.style.color = "green";
+					age_1=true;   
+				}else
+				{
+                    e.innerHTML = "User should be between 18 and 100 in age!";
+					e.style.color = "red";
+					age_1=false;
+                }
+            }
+	}		
+	
+function fun_add()
+	{
+	if (address.value == "")								 
+	{ 
+		window.alert("Please enter address."); 
+		address.focus(); 
+		return false; 
+	}
+	return true;
+	}
+
+function message(){                
+window.alert("Form Submitted Successfully");
+}
+
+
+	
+
+
+</script> 
+
+
+</html>    
+    
