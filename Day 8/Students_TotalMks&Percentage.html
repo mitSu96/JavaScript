@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students Marks & Percentage</title>
+</head>
+<body>
+    <fieldset>
+          <div class="wrapper">
+                    </div>
+                        <h2 align="center">Students</h2>
+                        <p><h3>• Create class student *which has* instance member roll number, name, marks1,marks2,marks3, total, percentage.
+                        </p> 
+                        <p>&nbsp&nbsp Write getter setter for roll number, name and marks1,marks2,marks3. 
+                            Write a method to calculate total and  percentage.</h3></p><br><br>
+                    
+                     <div class="Students"><h4>
+                       <p>Enter The Roll No Of Student &nbsp: <input type="number" placeholder="Roll Number" id="rno"></p><br>
+                       <p>Enter The Name Of Student &nbsp&nbsp&nbsp : <input type="text" placeholder="Name" id="name"></p><br>
+                       <p>Enter The Marks Of Subject 1 : <input type="number" placeholder="Marks Of 1st Subject" id="m1"></p><br>
+                       <p>Enter The Marks Of Subject 2 : <input type="number" placeholder="Marks Of 2nd Subject" id="m2"></p><br>
+                       <p>Enter The Marks Of Subject 3 : <input type="number" placeholder="Marks Of 3rd Subject" id="m3"></p><br>
+                        </h4>
+                        <button id="submit" onclick="fun_students()">Submit</button><span id="1"></span>
+                     </div>   
+    </fieldset> 
+
+<script>
+
+class Student
+{
+    constructor()
+    {
+        this.rnumber=0;
+        this.name="";
+        this.marks1=0;
+        this.marks2=0;
+        this.marks3=0;
+        this.total=0;
+        this.percentage;
+        this.outOf=300;
+    }
+    
+    set setRollNumber(_rno){
+        this.rnumber=_rno;
+    }
+    
+    set setName(_name){
+        this.name=_name;
+    }
+
+    set setMarks1(_marks1){
+        this.marks1=_marks1;
+    }
+    
+    set setMarks2(_marks2){
+        this.marks2=_marks2;
+    }
+    
+    set setMarks3(_marks3){
+        this.marks3=_marks3;
+    }
+
+    get getRollno(){
+        return this.rnumber;
+    }
+
+    get getName(){
+        return this.name;
+    }
+
+
+    get getTotal(){
+        this.total=parseInt(this.marks1)+parseInt(this.marks2)+parseInt(this.marks3);
+        return this.total;
+    }
+
+    get getPercentage(){
+        this.percentage=((this.total/this.outOf)*100);
+        return this.percentage;
+
+    }
+    
+}
+
+obj = new Student();
+
+function fun_students() 
+{
+    let rn = document.getElementById("rno").value;
+    let n = document.getElementById("name").value;
+    let m1 = document.getElementById("m1").value;
+    let m2 = document.getElementById("m2").value;
+    let m3 = document.getElementById("m3").value;
+
+    s = new Student();
+
+    s.setRollNumber = rn;
+    s.setName = n;
+    s.setMarks1 = m1;
+    s.setMarks2 = m2;
+    s.setMarks3 = m3;
+
+    document.getElementById("1").innerHTML = 
+    "<h4> Student_Name : " + s.getName + 
+    "<br><br> Student_RollNO :" + s.getRollno +
+    "<br><br> Total : " + s.getTotal +
+    "<br><br> OutOf : " +s.outOf +
+    "<br><br> Percentage : " + s.getPercentage
+    "</h4>";
+}
+
+</script>
+        
+</body>
+</html>
+
+
+
+
+
+
