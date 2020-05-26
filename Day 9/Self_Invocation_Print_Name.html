@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Print Name</title>
+    </head>
+<body>
+    <fieldset>
+    <p><h2>• Write a self invoking function  whose job is to print your name.</h2></p>
+
+    <p><h3>Enter The Name To Be Invoked: <input type="text" id="name" ></h3></p><br><br>
+        <button type="button" onclick="invoke_name()">Display</button><br>
+
+    <p id="invocation"></p>
+    </fieldset>
+
+
+<script>
+
+function invoke_name()          //function to self invoke name
+{
+
+    (function () 
+        {
+            var res = document.getElementById("name").value;
+            document.getElementById("invocation").innerHTML ="<h4>MyName :  </h4>" + "<h2>" +res
+            "</h2>";
+        }
+    )();
+
+}
+
+</script>
+
+</body>
+</html>
