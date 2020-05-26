@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary</title>
+</head>
+<body>
+    <fieldset>
+          <div class="wrapper">
+                    </div>
+                        <h2 align="center">Employees</h2>
+                        <p><h3>• Create class Employee which has instance member id, name , salary, net salary. 
+                        Also Write getter setter for each instance member.</p> 
+                        <p>&nbsp&nbsp Write calculate net salary function whose job is to calculate net salary 
+                        after deduction of 10 % TDS. Create 2 objects of the class and call method.</h43</p><br><br>
+                     <div class="emp1">
+                       <p>Enter The Employee ID : <input type="number" placeholder="Employee ID" id="EID"></p><br>
+                       <p>Enter The Employee Name : <input type="text" placeholder="Employee Name" id="Ename"></p><br>
+                       <p>Enter The Employee Salary : <input type="number" placeholder="Employee Salary" id="Esal"></p><br>
+                            <button id="submit" onclick="fun_salary()">SUBMIT</button><span id="1"></span>
+                     </div>   
+                    
+    
+            
+    </fieldset> 
+
+<script>
+class Employee
+{
+    constructor ()
+    {
+        this.id=0;
+        this.name="";
+        this.salary=0;
+        this.netSalary=0;
+    }
+    /**
+     * @param {number} _id
+     */
+    set setid(_id){
+        this.id=_id;
+    }
+    /**
+     * @param {string} _name
+     */
+    set setname(_name){
+        this.name=_name;
+    }
+    /**
+     * @param {number} _salary
+     */
+    set setsalary(_salary){
+        this.salary=_salary;
+    }
+    get netSal(){
+        return (this.salary-(this.salary*(0.1)));
+    }
+    get getId(){
+        return this.id;
+    }
+    get getName(){
+        return this.name;
+    }
+    get getSalary(){
+        return this.salary;
+    }
+}
+
+obj = new Employee();
+
+function fun_salary() {
+    let a = document.getElementById("EID").value;
+    let b = document.getElementById("Ename").value;
+    let c = document.getElementById("Esal").value;
+
+    emp = new Employee();
+
+    emp.setid = a;
+    emp.setname = b;
+    emp.setsalary = c;
+
+    
+    document.getElementById("1").innerHTML = 
+    "<h3>Employee name : " + emp.getName +
+    "<br>Employee Salary : ₹ " + emp.getSalary + 
+    "<br>Employee Net-Salary(After 10% TDS Deduction) : ₹ " + emp.netSal + "</h3><br>";
+
+}
+
+</script>
+        
+</body>
+</html>
+
+
+
+
+
+
