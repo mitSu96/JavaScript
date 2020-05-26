@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Square Of Number</title>
+</head>
+<body>
+<fieldset>
+<p><h2>• Write a self invoking function whose job is to return square of a number</h2></p>
+
+<p><h3>Enter The Number To Be Squared: <input type="number" id="num" ></h3></p><br><br>
+    <button type="button" onclick="invoke_square()">Display</button><br>
+
+<p id="invocation"></p>
+</fieldset>
+
+<script>
+
+function invoke_square() 
+{
+    (function () 
+     {
+        var x = document.getElementById("num").value;
+        document.getElementById("invocation").innerHTML ="<h3> Result:The Square Of " + x + " is </h3>" + "<h2>"+x*x
+        "</h2>";
+     })();
+
+}
+</script>
+
+</body>
+</html>
