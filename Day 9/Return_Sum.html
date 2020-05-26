@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Sum Of Numbers</title>
+</head>
+<body>
+<fieldset>
+    <div class="hcode">
+<h2><p>• write a function sum with no parameter but it will do the sum of numbers passed in function call eg sum(2,3,5), sum(2,4).</p>
+    <p>So your definition will work irrespective of the number of parameters passed.</p></h2>
+
+
+
+    <h2>Function doing sum of numbers which aren't passed as paramenters(Hardcoded Values)</h2>
+
+    <p id="hardcoded"></p>
+    <span id="1"></span><br><br><br>
+
+    </div>
+
+    <div class="ucode">
+        <h2>Function doing sum of numbers which are passed as paramenters(Input Values From User)</h2>
+
+        <h3><p>Enter The  1st &nbsp Number : <input type="number" name="n1" id="n1" placeholder="Number 1"></p>
+        <p>Enter The 2nd Number : <input type="number" name="n2" id="n2" placeholder="Number 2"></p>
+        <p>Enter The 3rd Number : <input type="number" name="n3" id="n3" placeholder="Number 3"></p></h3><br>
+                <button id="btn" onclick="Fun_sumall()">ADD</button><br><br>
+                <span id="2"></span>
+    </div>
+</fieldset>
+
+<script>
+
+function Sumall()
+{
+    var i=0;
+    var sum=0;
+    var x=arguments.length;
+    for(i=0;i<x;i++)
+    {
+    sum=sum+arguments[i];
+    }
+        return sum;
+}
+    document.getElementById("hardcoded").innerHTML="The Sum Of Hardcoded Values 2,6,12,18,21,26,69 is :" + Sumall(2,6,12,18,21,26,69);
+
+function Fun_sumall()
+    {
+        var a = document.getElementById("n1").value;
+        var b = document.getElementById("n2").value;
+        var c = document.getElementById("n3").value;
+        if(a==""){a=undefined;}
+        if(b==""){b=undefined;}
+        if(c==""){c=undefined;}
+        add3(a,b,c);
+    }
+    
+    function add3(a=0,b=0,c=0)
+    {
+      
+      let sum = 0;
+      sum=parseInt(a)+parseInt(b)+parseInt(c);
+      document.getElementById("2").innerHTML = 
+      "<h3>Sum Of The Numbers  :"   + sum
+      "</h3>";
+  }    
+
+</script>
+</body>
+</html>
+
