@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Color Change Via Buttons</title>
+
+<body>
+    <fieldset>
+        <h1>Task 4 : • Create three radio buttons which show names of colour. Create a text box.Let user enter name in text box
+           and select radio button ,on clicking the text in a text box should get respective colour.</h1><br>
+
+        <h1>Select The Color Of Text:</h1>
+        <h1><input type="text" name="txtbox" id="4" placeholder="Enter Your Name"><br><br>
+        <input type="radio" name="color" id="radio1" value="green" onclick="RBcolor(this.value)"><label for="green">GREEN</label>
+        <input type="radio" name="color" id="radio3" value="red" onclick="RBcolor(this.value)"><label for="red">RED</label>
+        <input type="radio" name="color" id="radio2" value="blue" onclick="RBcolor(this.value)"><label for="blue">BLUE</label></h1>   <!--Labels To Display & Select The Text Color-->
+    </fieldset>
+<script>
+
+   function RBcolor(col)                                        //function to change the color of text via radio button selection
+{
+    document.getElementById("4").style.color = col;             // this sets the  color of text depending on the radiobutton clicked
+    document.getElementById("4").style.fontSize="50pt";         // just a  modification to increase the text size so that the color is more visible in the textbox
+
+
+}
+
+</script>
+</body>
+</html>
