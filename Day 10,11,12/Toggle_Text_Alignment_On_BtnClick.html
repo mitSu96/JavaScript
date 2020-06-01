@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Alignment</title>
+    <style>
+      
+    </style>
+ <body>
+    <h2>
+        Task : 2 • Write your name in h1 tag align it to the left,on button click it should align to right. </h2>
+    <h1 id="2" style="text-align: Left;">Sumit S. Chaure</h1>
+    <button id="button2" value="Right" onclick="align()">Align To Right Side</button>
+ </body>
+
+ <script>
+
+ function align(){
+
+    let a = document.getElementById("2");
+    let prev = a.style.textAlign;                             //previous alignment
+    let next = document.getElementById("button2").value;      //new alignment
+
+    a.style.textAlign = next;                                //new alignment assignement
+
+    document.getElementById("button2").value = prev;        //alingment switched for toggle
+    document.getElementById("button2").innerHTML ="Toggle Text To " + prev + " Side";    //change button name
+}
+
+</script>
+
+</body>
+</html>
