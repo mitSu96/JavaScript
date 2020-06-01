@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Day 13-14</title>
+  </head>
+
+
+<body>
+    <fieldset>
+        <h3>
+            • Create a text box and two buttons ‘create cookie and read cookie.’ 
+            When user enters data in a text box and clicks on button create cookie 
+            it should store data in cookie. 
+            When user clicks on button read cookie it should display cookie data on the page.
+        </h3>
+        <input type="text" id="box" placeholder="Add Data To Be Stored As Cookie"><br><br>              <!--textbox to take data input to be saved as cookie-->
+
+        <button id="button1" onclick="document.cookie = box.value;">Create Cookie Data</button>
+
+        <button id="button2" onclick="op4.innerHTML = document.cookie">Display Cookie Data</button><br>
+        <span id="op4"></span>
+
+        <section class="section section4">
+            <h3>
+                • Create a text box and two buttons ‘create cookie and read cookie.’ 
+                When user enters data in a text box and clicks on button create cookie 
+                it should store data in cookie. 
+                When user clicks on button read cookie it should display cookie data on the page.
+            </h3>
+            <input type="text" id="txt1" placeholder="add data herer"><br>
+            <button id="btn2" 
+            onclick='document.cookie = txt1.value;'>CREATE COOKIE</button>
+            <button id="btn3" onclick="op4.innerHTML = document.cookie">DISPLAY COOKIE</button><br>
+            <span id="op4"></span>
+        </section>
+        
+    </fieldset>
+</body>  
+</html>
