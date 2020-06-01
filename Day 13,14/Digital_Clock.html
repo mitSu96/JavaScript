@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Day 13-14</title>
+  </head>
+
+  <body onload="dispTime()">
+    <fieldset>
+      <h1>Task 1: • Write a program to display a digital clock (Using JS Timing Event)</h1>
+          <p id="1"></p><br>
+
+      <h1>Simple String To Display Digital Clock (Using .toLocaleTimeString() ) </h1>
+      <p id="c1"></p><br>
+
+      <h1> Digital Clock With Day,Date,Year,Time(24Hrs Format) And TimeZone (Using .get() multiple params) </h1>
+        <p id="dc"></p>
+        <img src="https://www.countryflags.io/IN/shiny/64.png">
+
+    </fieldset>
+  </head>          
+
+<script>
+  
+  function dispTime()
+{
+    let current = new Date();
+    let hour = current.getHours();
+    let minute = current.getMinutes();
+    let sec = current.getSeconds();
+    let meridium = "AM";
+    minute = checkTime(minute);
+    sec = checkTime(sec);
+
+    if(hour > 12)
+    {
+        meridium = "PM";
+        hour-=12;
+    }
+
+    
+    
+    document.getElementById("1").innerHTML ="<h2>The Current Time Is :" + hour+ ":" + minute + ":" + sec + " "+ meridium
+      "</h2>";
+    var tIncrement = setInterval(dispTime, 1000);
+
+    let day = current.getDay();                       //digital clock that displays time ,date & Timezone in 24hrs Format
+    document.getElementById("dc").innerHTML="<h2>The Local Time & Date In India Is : " +current 
+      "</h2>";
+
+
+
+
+}
+
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};
+    return i;
+  }
+
+
+var myVar = setInterval(myTimer, 100);
+
+function myTimer() {
+  var localtime = new Date();
+  document.getElementById("c1").innerHTML ="<h2>The Current Local Time Is :" +localtime.toLocaleTimeString()
+    "</h2>"
+}
+
+
+
+</script>
+
+
+</body>
+</html>
