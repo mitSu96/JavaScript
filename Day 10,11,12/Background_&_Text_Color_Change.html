@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name & Background Color Change</title>
+    
+ <body>
+    <fieldset>
+        <h1>Task 3 : •  Write your name in p tag with background colour blue and text in white colour , on button click it should reverse the colour 
+            ie. Text colour blue and background colour white.
+        </h1>
+        <h1>
+            <p id="3" style="background-color: blue; color: white;">Sumit S. Chaure</p>  <!--Setting default style for text and bgcolor-->
+            <button id="button3" onclick="colorshift()">SWITCH Background & Text Color</button>
+        </h1>
+    </fieldset>
+ 
+
+ <script>
+
+    function colorshift()
+    {
+        let response = document.getElementById("3");
+        let og1 = response.style.color;
+        let og2 = response.style.backgroundColor;            //original bgcolor & text color defaults inside og1-og2 var
+        let shift=og1;                                       //Temp var shift to take value of text color
+        og1=og2;                                            //shifting text color to background  
+        og2=shift;                                          //shifting background color to temp/text color 
+        response.style.color = og1;
+        response.style.backgroundColor = og2;
+    }
+
+ </script>
+
+ </body> 
+</html>
