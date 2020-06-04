@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Day 13-14</title>
+  </head>
+
+
+<body>
+    <fieldset>
+            <h2>
+                • Create a text box and two buttons ‘create cookie and read cookie’. 
+                When user enters data in a text box and clicks on button create cookie 
+                it should store data in cookie.</h2>
+                    <h2>When user clicks on button read cookie it should display cookie data on the page.
+            </h2>
+            <p id="Method">
+            <input type="text" id="holddata" placeholder="Enter Cookie Data "><br><br>
+
+            <input type="button" value="SetCookie" onclick="setCookie()"> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+            <input type="button" value="GetCookie" onclick="getCookie()"></p><br><br><hr><br>
+
+            <p id="alternative">
+                <h2>• Create & Display Dircetly & Displaying It On Span</h2>
+                
+                <input type="text" id="txt1" placeholder="Data To Be Saved As Cookie"><br><br><br>
+
+                <button id="btn2" onclick='document.cookie = txt1.value;'>CREATE COOKIE</button> &nbsp&nbsp&nbsp&nbsp&nbsp
+
+                <button id="btn3" onclick="res.innerHTML = document.cookie">DISPLAY COOKIE</button><br>
+                <span id="res"></span>
+            </p>
+    </fieldset>
+
+
+<script>  
+
+     function setCookie()                                   //records the cookie data
+        {  
+           document.cookie=holddata.value;                 //captures the text value from textbox and places in document.cookie
+        }  
+                
+    function getCookie()                                    
+        {  
+            if(document.cookie.length!=0)                   
+                {  
+                    alert(document.cookie);  
+                }  
+                else  
+                {  
+                    alert("Cookie not available.Enter A Data In Any Of The Two Boxes");  
+                }  
+                }  
+</script>  
+              
+</body>  
+</html>
