@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Addition & Subtraction Of Input Values Inside Textbox.</title>
+
+<body>
+    <fieldset>
+        <h1>Task 6 : • Create three text boxes and two radio buttons showing value “add” and “subtract”.</h1>
+        <h1>Let user enter number in two text boxes and as per the selected radio button it should display result in the 3rd text box.
+        </h1>
+        <h1>
+            <input type="number" name="" id="ip1" placeholder="Enter The First Number">
+            <input type="number" name="" id="ip2" placeholder="Enter The Second Number">
+            <input type="number" name="" id="op" placeholder="Output Would Be Displayed Here After Radio Button Click."><br></h1>
+
+        <input type="radio" name="math" id="add" onclick="add()">
+        <!--here we could directly use the add function on onclick without having to separately write them in script as an alternative.-->
+        <label for="add">ADDITION </label>
+
+        <input type="radio" name="math " id="subtract" onclick="sub()">
+        <!--same as addition we can keep the function sub directly onclick event-->
+        <label for="subtract">SUBTRACTION</label>
+
+    </fieldset>
+
+
+    <script>
+        function add() {
+            op.value = parseInt(ip1.value) + parseInt(ip2.value);
+        }
+
+        function sub() {
+            op.value = parseInt(ip1.value) - parseInt(ip2.value);
+        }
+    </script>
+
+</body>
+
+</html>
