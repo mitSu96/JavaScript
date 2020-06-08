@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paragraph P Tag & BGColor Change</title>
+
+<body>
+    <fieldset>
+        <h3>
+            <p>
+                Write at least 3 paragraph about yourself. Create a button on click it should count number of p tags used in document. Also give blue background colour to all p tags.</p>
+        </h3>
+
+        <div class="section g" id="sect">
+            <p class="para">To start with, I'm a very interesting fellow, who's very hard to understand. A selfless attitude towards anyone whom I come across with. I'm of a very friendly nature and love to be with people who aren't selfish.</p>
+
+            <p class="para">Ambitious, can do anything to achieve my aim. I'm of a very competitive nature but love to find good in everything I see. According to me, there are many things that make us depressed or upset, but that doesn't mean that we stop living. In
+                fact, problems are a sign of life. They make us believe that we are living. The only people who have no problems are in cemetry. So we shall be fortunate that we have problems. It enhances our minds. This is the philosophy of my life.
+                I'm a lover of nature. Rain, moon, clouds, gardens, greenery is all I'm the most attracted towards. I love to be around it. I'm a lover of peace, harmony and prosperity around me.</p>
+
+            <p class="para">I have many friends, and really very fortunate to have them. They are very open-minded and encouraging. They really love me, and even when I forget them, they would never forget me. By the grace of God , I have them. May they be blessed and
+                successful in the course of life. May they have all that what they wish to achieve. I am very fortunate to have all my friends, my dear parents, sisters. May God bless them with happiness, joy and prosperity. May God provide them with
+                a long life. Thanks!!
+            </p>
+        </div>
+        <p>Credits:
+            <a href="https://brainly.in/question/2397501">Brainly</a>
+        </p>
+        <span id="op"></span>
+        <label>Click On The Button To Change Bgcolor & Get P Tag Numbers:</label>
+        <button onclick="paragraph()">Click</button>
+    </fieldset>
+
+
+    <script>
+        function paragraph() {
+            let a = document.getElementById("sect");
+            let b = document.getElementsByTagName("p");
+            let c = a.getElementsByTagName("p");
+            document.getElementById("op").innerHTML =
+                "Number Of &lt;p&gt; Tags In Whole Document Are :" + b.length +
+                "<br>Number Of &lt;p&gt; Tags In This Paragraph Div Are :" + c.length + "<br><br>";
+
+            let z = a.childNodes;
+
+            for (let i = 0; i < z.length; i++) {
+                if (z[i].nodeName.toLowerCase() == 'p') {
+                    z[i].style.backgroundColor = "blue";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
