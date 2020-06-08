@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Name & Background Color Change</title>
+
+<body>
+    <fieldset>
+        <h1>Task 5 : • Create a dropdown box showing the number 1 to 10. Write your name in p tag let user select option from dropdown and that font size should be applied to the data in p tag.</h1>
+
+        <p id="hh">Sumit S. Chaure</p>
+
+
+        <select onchange="myFunction(this);">
+            <option value="xx-small">0<option>
+            <option value="x-small">1</option>
+            <option value="small">2</option>
+            <option value="medium">3</option>
+            <option value="large">4</option>
+            <option value="x-large">5</option>
+            <option value="xx-large">6</option>
+            <option value="250%">7</option>
+            <option value="500%">8</option>
+            <option value="3cm">9</option>
+            <option value="200px">10</option>
+        </select>
+
+    </fieldset>
+
+    <script>
+        function myFunction(selectTag) {
+            var listValue = selectTag.options[selectTag.selectedIndex].value;
+            document.getElementById("hh").style.fontSize = listValue;
+        }
+    </script>
+</body>
+
+</html>
