@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text ON Span</title>
+
+<body>
+    <fieldset>
+        <h1>
+            Task 10: • Create text box and a span tag , on change it should give error if user keeps text box empty.
+        </h1>
+        <input type="text" id="text" placeholder="Enter The Data Here" onchange="chng_err(this.value)">To Get Error Type Something,Click Outside & Then Erase It And Click Outside.<br>
+        <h2><span id="op"></span></h2><br>
+        <hr>
+        <h1>
+            Using Try Catch Method.
+        </h1>
+        <input type="text" id="txt">
+        <span id="op1"></span>
+        <button type="button" onclick="disp()">Click Here</button>
+    </fieldset>
+
+
+    <script>
+        function chng_err(a) {
+
+            if (a == "") {
+                document.getElementById("op").innerHTML = "Input Can't Be Empty.";
+            }
+        }
+
+        function disp() {
+            var a = document.getElementById("txt").value
+            if (a == 0) {
+                try {
+                    throw "Please Enter Something"
+                } catch (err) {
+                    document.write(err)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
