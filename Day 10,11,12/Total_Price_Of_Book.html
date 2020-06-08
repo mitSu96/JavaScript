@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text ON Span</title>
+
+<body>
+    <fieldset>
+        <h2>
+            Task 12: Create three check boxes showing book name and price. Create a text box. As per selection of check box , text box should show total of selected price.
+        </h2>
+        <h3><label for="book1">• Book1- Cracking the Coding Interview : ₹ 1800</label>
+            <input type="checkbox" name="b1" id="c1" value="1800" onclick="cal_price()"><br><br>
+            <label for="book2">• Book2- Clean Code: ₹ 690</label>
+            <input type="checkbox" name="b2" id="c2" value="690" onclick="cal_price()"><br><br>
+            <label for="book3">• Book3- Introduction to Algorithms(The MIT Press): ₹ 1100</label>
+            <input type="checkbox" name="b3" id="c3" value="1100" onclick="cal_price()"><br><br>
+            <input type="text" id="op" placeholder="Total Values Of  Books : ₹0 "></h3>
+    </fieldset>
+
+    <script>
+        function cal_price() {
+            let sum = 0,
+                i = 0;
+            let b1 = document.getElementById("c1");
+            let b2 = document.getElementById("c2");
+            let b3 = document.getElementById("c3");
+            let values = [b1.value, b2.value, b3.value];
+            let flag = [b1.checked, b2.checked, b3.checked];
+
+            while (i < 3) {
+
+                if (flag[i]) {
+                    sum += parseInt(values[i]);
+                } else {
+                    i++;
+                    continue;
+                }
+                document.getElementById("op").value = "Total Book Cost Is ₹ :" + sum;
+                i++;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
