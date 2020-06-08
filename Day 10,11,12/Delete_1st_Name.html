@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete 1St Name</title>
+
+<body>
+    <fieldset>
+        <h1>Task 8:• Write your friends name using OL tag. Create a button whose job is to delete the 1st name from the OL tag.
+        </h1>
+        <h2>
+            <ol id="ol">
+                <li>mitSu</li>
+                <li>Shubham</li>
+                <li>Jerin</li>
+                <li>Saurabh</li>
+                <li>Pratik</li>
+                <li>Ganesh</li>
+            </ol>
+        </h2>
+        <button id="btn" onclick="del()">Delete 1st Name From The List</button>
+    </fieldset>
+
+
+    <script>
+        function del() {
+            let parent = document.getElementById("ol");
+            let node = parent.childNodes;
+
+            parent.removeChild(node[0]);
+            parent.removeChild(node[1]);
+
+        }
+    </script>
+
+</body>
+
+</html>
